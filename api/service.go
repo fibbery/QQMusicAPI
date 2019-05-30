@@ -8,8 +8,8 @@ import (
 )
 
 /**
-	获取歌曲的media id
- */
+获取歌曲的media id
+*/
 func searchMediaId(sing string, author string) string {
 	params := url.Values{
 		"key": {sing,},
