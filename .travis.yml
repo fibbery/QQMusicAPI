@@ -1,2 +1,4 @@
 language: go
-script: true
+go:
+    - 1.12
+sudo: required

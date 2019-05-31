@@ -1,3 +1,4 @@
+![](https://travis-ci.com/fibbery/QQMusicAPI.svg?branch=master)
 ## 项目简介
 通过PC版QQ音乐的接口，封装成一个简单的go工具包，为实现自定义QQ音乐播放器做准备。
 
