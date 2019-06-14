@@ -17,11 +17,11 @@ func main() {
 		}{
 			Singers: &api.MediaCollection{
 				Type: int(api.SONG),
-				Items: []api.Media{
+				Items: &[]api.Media{
 					{
-						Id:      62342,
+						Id:      "62342",
 						Name:    "他说",
-						DocId:   62342,
+						DocId:   "62342",
 						Singer:  "linjunjie",
 						MediaId: "000TuW8h0AH2n4",
 						PicUrl:  "http://www.baidu.com",
