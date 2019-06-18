@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/fibbery/qqmusic/music"
+	"github.com/fibbery/QQMusicAPI/music"
 )
 
 func main() {
