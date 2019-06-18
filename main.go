@@ -1,23 +1,23 @@
 package main
 
 import (
-	"QQMusicAPI/api"
+	"github.com/fibbery/qqmusic/music"
 	"encoding/json"
 	"fmt"
 )
 
 func main() {
-	response := api.SearchResponse{
-		CommonResponse: api.CommonResponse{1, 1},
+	response := music.SearchResponse{
+		CommonResponse: music.CommonResponse{1, 1},
 		Data: struct {
-			Singers *api.MediaCollection `json:"singer,omitempty"`
-			Mvs     *api.MediaCollection `json:"mv,omitempty"`
-			Albums  *api.MediaCollection `json:"album,omitempty"`
-			Songs   *api.MediaCollection `json:"song,omitempty"`
+			Singers *music.MediaCollection `json:"singer,omitempty"`
+			Mvs     *music.MediaCollection `json:"mv,omitempty"`
+			Albums  *music.MediaCollection `json:"album,omitempty"`
+			Songs   *music.MediaCollection `json:"song,omitempty"`
 		}{
-			Singers: &api.MediaCollection{
-				Type: int(api.SONG),
-				Items: &[]api.Media{
+			Singers: &music.MediaCollection{
+				Type: int(music.SONG),
+				Items: &[]music.Media{
 					{
 						Id:      "62342",
 						Name:    "他说",

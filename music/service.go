@@ -1,4 +1,4 @@
-package api
+package music
 
 import (
 	"encoding/json"
@@ -13,7 +13,7 @@ func Search(mediaType MediaType, key string) *MediaCollection {
 		"key": {key},
 	}
 	result := new(SearchResponse)
-	http_get(searchMediaUrl, params, result)
+	httpGet(searchMediaUrl, params, result)
 	if result.Code != 0 {
 		log.Printf("execute %s fail, the code is %d, the subcode is %d", searchMediaUrl, result.Code, result.Subcode)
 		return nil
@@ -32,10 +32,9 @@ func Search(mediaType MediaType, key string) *MediaCollection {
 	}
 }
 
-/**
-封装get请求
-*/
-func http_get(method string, params url.Values, rep interface{}) {
+
+// 封装get请求
+func httpGet(method string, params url.Values, rep interface{}) {
 	var data string
 	for key, value := range params {
 		data += key + "=" + value[0] + "&"
@@ -54,10 +53,8 @@ func http_get(method string, params url.Values, rep interface{}) {
 	}
 }
 
-/**
-封装post请求
-*/
-func http_post(method string, params url.Values, rep interface{}) {
+//封装post请求
+func httpPost(method string, params url.Values, rep interface{}) {
 	response, e := http.PostForm(basePath+method, params)
 	if e != nil {
 		fmt.Printf("get media id has occur error , %v", e)

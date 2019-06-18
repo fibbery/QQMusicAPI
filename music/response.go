@@ -1,4 +1,4 @@
-package api
+package music
 
 type MediaType int
 

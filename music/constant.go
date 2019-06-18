@@ -1,4 +1,4 @@
-package api
+package music
 
 const (
 	//请求的基础路径

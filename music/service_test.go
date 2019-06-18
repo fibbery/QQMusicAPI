@@ -1,6 +1,7 @@
-package api
+package music
 
 import (
+	"encoding/json"
 	"fmt"
 	"testing"
 )
@@ -21,8 +22,9 @@ func TestSearch(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			items := Search(tt.args.mediaType, tt.args.key)
-			fmt.Printf("%v", items)
+			item := Search(tt.args.mediaType, tt.args.key)
+			data, _ :=json.MarshalIndent(item,"","    ")
+			fmt.Printf("%s\n", data)
 		})
 	}
 }
