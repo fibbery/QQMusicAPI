@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/fibbery/qqmusic/music"
 	"encoding/json"
 	"fmt"
+	"github.com/fibbery/qqmusic/music"
 )
 
 func main() {
